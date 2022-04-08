@@ -1,4 +1,4 @@
-const prev = document.querySelector('.prev');
+const prev = document.querySelector('.prev'); 
 const next = document.querySelector('.next');
 const images = document.querySelector('.carousel').children;
 const totalImages = images.length;
@@ -15,7 +15,7 @@ next.addEventListener('click', () => {
 
 function nextImage(direction) {
   if(direction == 'next') {
-    index++;
+    index++; //index=index+1
     if(index == totalImages) {
       index = 0;
     }
@@ -23,12 +23,14 @@ function nextImage(direction) {
     if(index == 0) {
       index = totalImages - 1;
     } else {
-      index--;
+      index--; //index=index-1
     }
   }
 
+  // Putting the image at the index position in spotlight/visible.
   for(let i = 0; i < images.length; i++) {
     images[i].classList.remove('main');
   }
+  
   images[index].classList.add('main');
 }

@@ -8,6 +8,7 @@ body {
   height: 400px;
   position: relative;
   margin: 0 auto;
+  border:5px black ridge;
   
 }
 
@@ -24,6 +25,7 @@ body {
 .item {
   position: absolute;
   display: none;
+  
 }
 
 .caption {
@@ -36,11 +38,14 @@ body {
   background: rgba(0, 0, 0, 0.3);
   height: 50px;
   text-align: center;
+  padding-top:20px;
 }
 
 .main {
   display: block;
 }
+
+
 .navigation .prev {
   position: absolute;
   z-index: 10;
